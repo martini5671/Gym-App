@@ -9,7 +9,7 @@ public class DatabaseConnection {
 
     public Connection getConnection() {
         String url = "url_string";
-        String username = "USERNAME";
+        String username = "USERNAMEE";
         String password = "PASSWORD";
 
         try {
