@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gym_app.RegistrationController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FE9900;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" layoutX="33.0" layoutY="109.0" rotate="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" width="135.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Rectangle>
+            <ImageView fitHeight="62.0" fitWidth="147.0" layoutX="27.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@dumbell.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="17.0" layoutY="155.0" prefHeight="44.0" prefWidth="167.0" text="EPIC  GYM">
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2740415930747986" green="0.23196880519390106" blue="0.7368420958518982" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7263157963752747" green="0.04842105135321617" blue="0.04842105135321617" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="back_to_login_button" layoutX="24.0" layoutY="351.0" mnemonicParsing="false" onAction="#switchToLoginScene" prefHeight="26.0" prefWidth="151.0" text="Powrót do logowania" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane layoutX="5.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="390.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="94.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="406.0" minWidth="10.0" prefWidth="276.4" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.400000000000006" minHeight="10.0" prefHeight="30.400000000000006" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.400000000000006" minHeight="10.0" prefHeight="30.400000000000006" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="29.399999999999977" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="28.0" prefHeight="30.0" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.600000000000023" prefHeight="30.0" />
+               </rowConstraints>
+               <children>
+                  <Label text="Imię" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <Label text="Nazwisko" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <TextField fx:id="name_input" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <TextField fx:id="surname_input" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Adres" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <TextField fx:id="address_input" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Telefon" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                  <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                  <Label text="Wiek" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                  <Label text="Płeć" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                  <ChoiceBox fx:id="gender_dropdown" prefHeight="26.0" prefWidth="281.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Hasło" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                  <PasswordField fx:id="password1_input" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <PasswordField fx:id="password2_input" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Label text="Powtórz hasło" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                  <TextField fx:id="email_input" layoutX="114.0" layoutY="84.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="phone_input" layoutX="114.0" layoutY="114.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="age_input" layoutX="114.0" layoutY="144.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+            <Label layoutX="147.0" layoutY="19.0" prefHeight="30.0" prefWidth="123.0" text="Zarejstruj się! ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="reset_password" layoutX="125.0" layoutY="351.0" mnemonicParsing="false" onAction="#register" prefHeight="26.0" prefWidth="150.0" text="Stwórz konto" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

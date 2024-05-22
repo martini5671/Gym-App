@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gym_app.LoginController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FE9900;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" layoutX="33.0" layoutY="109.0" rotate="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" width="135.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Rectangle>
+            <ImageView fitHeight="62.0" fitWidth="147.0" layoutX="27.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@dumbell.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="17.0" layoutY="155.0" prefHeight="44.0" prefWidth="167.0" text="EPIC  GYM">
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2740415930747986" green="0.23196880519390106" blue="0.7368420958518982" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7263157963752747" green="0.04842105135321617" blue="0.04842105135321617" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="13.0" layoutY="353.0" prefHeight="46.0" prefWidth="176.0" text="Epic Gym Inc. ©2022. All Rights Reserved." textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="9.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="login_button" layoutX="60.0" layoutY="261.0" mnemonicParsing="false" onAction="#clickLoginButton" prefHeight="30.0" prefWidth="280.0" text="Zaloguj">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="register_button" layoutX="60.0" layoutY="301.0" mnemonicParsing="false" onAction="#switchToRegisterScene" prefHeight="30.0" prefWidth="280.0" text="Zarejestruj">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="reset_password" layoutX="60.0" layoutY="341.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="280.0" text="Zresetuj hasło">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="61.0" layoutY="147.0" text="Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="187.0" text="Hasło">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email_input" layoutX="119.0" layoutY="147.0" prefHeight="26.0" prefWidth="220.0" />
+            <PasswordField fx:id="password_input" layoutX="118.0" layoutY="187.0" prefHeight="26.0" prefWidth="222.0" />
+            <Label layoutX="114.0" layoutY="83.0" prefHeight="44.0" prefWidth="172.0" text="Panel logowania" textFill="#402727">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="errors_label" layoutX="60.0" layoutY="227.0" prefHeight="20.0" prefWidth="277.0" textAlignment="CENTER" textFill="#f20000" />
+         </children></AnchorPane>
+   </right>
+</BorderPane>
